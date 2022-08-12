@@ -35,6 +35,12 @@ public class Brain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) state = AIState.Idle;
+        if (Input.GetKeyDown(KeyCode.Alpha2)) state = AIState.Chasing;
+        if (Input.GetKeyDown(KeyCode.Alpha3)) state = AIState.Fleeing;
+
+
         switch (state)
         {
             case AIState.Undefined:
